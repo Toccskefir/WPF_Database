@@ -12,6 +12,6 @@
             <Button x:Name="buttonModify" Content="Módosít" Width="150" Click="buttonModify_Click"/>
             <Button x:Name="buttonDelete" Content="Töröl" Width="150" Click="buttonDelete_Click"/>
         </StackPanel>
-        <DataGrid x:Name="dataGridEmployee"></DataGrid>
+        <DataGrid x:Name="dataGridEmployees"></DataGrid>
     </DockPanel>
 </Window>

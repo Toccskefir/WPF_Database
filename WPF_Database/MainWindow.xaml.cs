@@ -16,15 +16,18 @@ namespace WPF_Database
     /// </summary>
     public partial class MainWindow : Window
     {
+        EmployeeService employeeService;
+
         public MainWindow()
         {
             InitializeComponent();
+            employeeService = new EmployeeService();
             Read();
         }
 
         private void Read()
         {
-
+            dataGridEmployees.ItemsSource = employeeService.GetAll();
         }
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e)
