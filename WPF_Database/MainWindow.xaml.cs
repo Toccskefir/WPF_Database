@@ -42,7 +42,7 @@ namespace WPF_Database
 
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }

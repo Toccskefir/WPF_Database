@@ -67,17 +67,17 @@ namespace WPF_Database
             return affectedRows == 1;
         }
 
-        public bool Update(Employee employee)
+        public bool Update(int id, Employee newEmployee)
         {
             OpenConnection();
             string sql = "UPDATE dolgozok SET nev = @name, nem = @gender, kor = @age, fizetes = @salary WHERE id = @id";
             MySqlCommand command = connection.CreateCommand();
             command.CommandText = sql;
-            command.Parameters.AddWithValue("@name", employee.Name);
-            command.Parameters.AddWithValue("@gender", employee.Gender);
-            command.Parameters.AddWithValue("@age", employee.Age);
-            command.Parameters.AddWithValue("@salary", employee.Salary);
-            command.Parameters.AddWithValue("@id", employee.Id);
+            command.Parameters.AddWithValue("@name", newEmployee.Name);
+            command.Parameters.AddWithValue("@gender", newEmployee.Gender);
+            command.Parameters.AddWithValue("@age", newEmployee.Age);
+            command.Parameters.AddWithValue("@salary", newEmployee.Salary);
+            command.Parameters.AddWithValue("@id", id);
 
             int affectedRows = command.ExecuteNonQuery();
 
@@ -86,13 +86,13 @@ namespace WPF_Database
             return affectedRows == 1;
         }
 
-        public bool Delete(Employee employee)
+        public bool Delete(int id)
         {
             OpenConnection();
             string sql = "DELETE FROM dolgozok WHERE id = @id";
             MySqlCommand command = connection.CreateCommand();
             command.CommandText = sql;
-            command.Parameters.AddWithValue("@id", employee.Id);
+            command.Parameters.AddWithValue("@id", id);
 
             int affectedRows = command.ExecuteNonQuery();
 
