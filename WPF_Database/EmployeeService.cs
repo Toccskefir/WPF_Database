@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WPF_Database
 {
-    internal class EmployeeService
+    public class EmployeeService
     {
         MySqlConnection connection;
         public EmployeeService()

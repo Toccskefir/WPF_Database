@@ -1,0 +1,36 @@
+﻿<Window x:Class="WPF_Database.EmployeeForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Database"
+        mc:Ignorable="d"
+        Title="EmployeeForm" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox x:Name="textBoxName" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center"/>
+        <RadioButton x:Name="radioButtonMale" Grid.Column="1" Grid.Row="1" Content="Férfi" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,0"/>
+        <RadioButton x:Name="radioButtonFemale" Grid.Column="1" Grid.Row="1" Content="Nő" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="100,0,0,0"/>
+        <TextBox x:Name="textBoxAge" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox x:Name="textBoxSalary" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center"/>
+
+        <Label Grid.Row="0" Content="Név:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+        <Label Grid.Row="1" Content="Nem:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+        <Label Grid.Row="2" Content="Életkor" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+        <Label Grid.Row="3" Content="Fizetés:" VerticalContentAlignment="Center" HorizontalContentAlignment="Right"/>
+
+        <Button x:Name="buttonAdd" Grid.Row="4" Grid.Column="1" Content="Hozzáad" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Click="buttonAdd_Click"/>
+        <Button x:Name="buttonUpdate" Grid.Row="4" Grid.Column="1" Content="Módosít" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Click="buttonUpdate_Click" Visibility="Collapsed"/>
+    </Grid>
+</Window>
