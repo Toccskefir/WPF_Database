@@ -18,10 +18,10 @@ namespace WPF_Database
     {
         EmployeeService employeeService;
 
-        public MainWindow()
+        public MainWindow(EmployeeService employeeService)
         {
             InitializeComponent();
-            employeeService = new EmployeeService();
+            this.employeeService = new EmployeeService();
             Read();
         }
 
